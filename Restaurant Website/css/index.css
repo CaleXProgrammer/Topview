@@ -1,0 +1,830 @@
+:root {
+    --primary-color: rgb(114, 39, 9);
+    --neutral-color: #ffffff;
+    --box-shadow: 1px 2px 2px rgb(204, 204, 204);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bars {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutral-color);
+    padding: 1em 2em;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav .logo {
+    /* flex-basis: 30%; */
+    width: 60px !important;
+    height: 60px;
+}
+
+nav .logo .img{
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/img/Topview_consulting_logo.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 100px;
+}
+
+nav .navbar ul {
+    display: flex;
+    gap: 1em;
+}
+
+nav .navbar ul li {
+    overflow: hidden;
+}
+
+nav .navbar ul li a {
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+nav .navbar ul li a::after{
+    content: '';
+    width: 100%;
+    left: 100%;
+    position: absolute;
+    height: 1.5px;
+    border-radius: 100px;
+    background-color: var(--primary-color);
+    bottom: 0;
+
+}
+
+nav .navbar ul li a:hover{
+    color: var(--primary-color);
+}
+
+nav .navbar ul li a:hover::after {
+    transition: .4s;
+    left: 0;
+}
+
+.home_container main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 6em  4em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.425)), url('../assets/img/restaurant\ image_1.jfif');
+    background-position: center;
+    background-size: cover;
+    height: 39em;
+    margin: 3em 0 2em 0;
+}
+
+.home_container main h1 {
+    color: white;
+    font-size: 3em;
+    padding-bottom: .5em;
+}
+
+.home_container main p {
+    color: white;
+    width: 60%;
+}
+
+.btn {
+    padding: 1em 2em;
+    margin: 1em 0;
+    background-color: var(--primary-color);
+    border: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn a {
+    color: var(--neutral-color);
+}
+
+.btn:hover {
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.btn:hover > a {
+    color: black;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    padding: 2em 4em;
+}
+
+.aboutUs .about_container, .franchise_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.aboutUs .about_container .imgBox, .about_us .about_us_inner .imgBox, .flex .imgBox {
+    flex-basis: 40%;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUs .about_container .imgBox img, .about_us .about_us_inner .imgBox img, .flex .imgBox img {
+    width: 100% !important;
+    height: 100% !important;
+    /* display: none; */
+}
+
+
+.aboutUs .about_container .txtBox, .about_us .about_us_inner .txtBox, .flex .txt {
+    flex-basis: 60%;
+    /* width: 1000px; */
+    padding: 1em 2em;
+    background-color: wheat;
+    margin-left: -10px;
+}
+
+.aboutUs .about_container .txtBox h2,.about_us .about_us_inner .txtBox h2 {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin: 0 0 0.4em 0;
+}
+
+.aboutUs .about_container .txtBox p, .about_us .about_us_inner .txtBox p {
+    color: gray;
+}
+
+.ourServices {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+}
+
+.ourServices header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourServices header h2 {
+    font-size: 3em;
+    margin: 0.3em 0;
+}
+
+.ourServices header p {
+    color: gray;
+}
+
+.ourServices .service_container {
+    display: flex;
+    padding: 1em 2em;
+    justify-content: space-between;
+}
+
+.ourServices .service_container .card {
+    background-color: white;
+    flex-basis: 24%;
+    text-align: center;
+    padding: 1em 2em;
+    display: flex;    
+    flex-direction: column;
+    /* box-shadow: var(--box-shadow); */
+}
+
+.ourServices .service_container .card h3 {
+    font-weight: 400;
+    margin: 1em 0;
+}
+
+.ourServices .service_container .card div {
+    background-color: gray;
+    width: 100%;
+    height: 150px;
+}
+
+.ourServices .service_container .card:hover > h3 {
+    transition: .5s;
+    color: var(--primary-color);
+}
+
+.ourServices .service_container .card:hover > div {
+    transition: .5s; 
+    background-color: var(--primary-color);
+}
+
+.ourServices .service_container .card p {
+    color: gray;
+    font-size: .8em;
+}
+
+.ourFeatures {
+    display: flex;
+    padding: 3em 5em ;
+    gap: 2em;
+    background-color: var(--primary-color);
+    align-items: center;
+}
+
+.ourFeatures .img {
+    flex-basis: 40%;
+    width: 100%;
+    height: 300px;
+    background-color: gray;
+}
+
+.ourFeatures .txtBox {
+    flex-basis: 50%;
+}
+
+.ourFeatures .txtBox .btn {
+    background-color: var(--neutral-color);
+}
+
+.ourFeatures .txtBox .btn a {
+    color: black;
+}
+
+.ourFeatures .txtBox h2 {
+    font-size: 2.5em;
+    margin-bottom: 0.6em;
+}
+
+.ourFeatures .txtBox #paragraph-one {
+    color: rgb(42, 42, 42);
+    width: 90% !important;
+}
+
+.whyUs {
+    padding: 2em 5em;
+}
+
+.whyUs .whyUsInner {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+}
+
+.whyUs header {
+    flex-basis: 47%;
+}
+
+.whyUs header h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.whyUs header button {
+    margin-bottom: 2em;
+}
+
+.whyUs header .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whyUs header .icons .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    transition: 0.5s;
+    position: relative;
+}
+
+.whyUs header .icons .icon .inner {
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    border-radius: 100px;
+}
+
+.whyUs header .icons .icon:hover::before{
+    display: block;
+}
+
+.whyUs header .icons .icon::before {
+    content: '';
+    position: absolute;
+    border: 4px solid black;
+    width: 120px;
+    height: 120px;
+    display: none;
+    border-radius: 100px;
+    top: -12px;
+}
+
+.whyUs header p {
+    color: rgb(14, 14, 14);
+    margin-bottom: 0.5em;
+}
+
+.whyUs .imgBox {
+    flex-basis: 48%;
+    width: 100%;
+    background-color: gray;
+    height: 400px;
+}
+
+.newsletter {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em auto;
+    background-color: var(--primary-color);
+    padding: 4em 2em;
+}
+
+.newsletter h2 {
+    font-size: 3em;
+    color: var(--neutral-color);
+    margin: 0 0 0.5em 0;
+}
+
+.newsletter p {
+    color: rgb(34, 34, 34);
+    width: 60%;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.newsletter form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.newsletter form input {
+    width: 100%;
+    height: 50px;
+    padding: 0.5em 1em;
+}
+
+.newsletter form .btn {
+    background-color: white;
+}
+
+.test .head {
+    text-align: center;
+}
+
+.test .head h2 {
+    font-size: 2em;
+}
+
+.testimonials {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 84%;
+    margin: 2em auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.testimonials .testInner {
+    display: flex;
+    gap: 1em;
+    width: 1000;
+    transition: 1s;
+}
+
+.testimonials .testInner .card {
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+    box-shadow: var(--box-shadow);
+    border-radius: 9px;
+}
+
+.testimonials .testInner .card .txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials .testInner .card h2 {
+    font-size: 1em;
+}
+
+.testimonials .testInner .card .txt p {
+    color: gray;
+    margin: 1em 0;
+}
+
+.testimonials .testInner .card header {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.testimonials .testInner .card header .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: gray;
+}
+
+.test .testimonials_container {
+    display: flex;
+    align-items: center;
+    padding: 1em 3em;
+}
+
+/* ABOUT US PAGE */
+
+.about_us {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.about_us header, .service_services header, .franchise_franchises header {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.about_us header .about_us_pages p, .service_services header .service_services_pages p, .franchise_franchises header .franchise_franchises_pages p {
+    font-size: 1.2em;
+}
+
+.about_us header .about_us_pages p span, .service_services header .service_services_pages p span, .franchise_franchises header .franchise_franchises_pages p span {
+    color: gray;
+    cursor: pointer;
+}
+
+.about_us .about_us_inner {
+    display: flex;
+    align-items: center;
+}
+
+.about_us .about_us_inner .imgBox{
+    flex-basis: 50%;
+    height: 400px;
+}
+
+.vision_container_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 2em auto;
+    width: 70%;
+    background-color: var(--primary-color);
+    padding: 2em 0;
+}
+
+.vision_container_top header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 1em;
+}
+
+.vision_container_top header div {
+    padding: 1em 2em;
+    background-color: white;
+    transition: .3s ;
+    border-radius: 100px;
+}
+
+.vision_container_top header div:hover {
+    background-color: var(--primary-color);
+    border: 1px solid white;
+}
+
+.vision_container_top .vision_inner {
+    display: flex;
+    padding: 1em 2em;
+    justify-content: space-between;
+}
+
+.vision_container_top .vision_inner .vision_card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.vision_container_top .vision_inner .vision_card .txt {
+    flex-basis: 50%;
+}
+
+.vision_container_top .vision_inner .vision_card .imgBox {
+    flex-basis: 50%;
+}
+
+.vision_container_top .vision_inner .vision_card .imgBox img {
+    width: 100%;
+}
+
+.vision_container_top .vision_inner .vision_card .txt {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.vision_container_top .vision_inner .vision_card .txt h3 {
+    font-size: 3em;
+}
+
+.vision_container_top .vision_inner .vision_card .txt p {
+    color: white;
+    width: 70%;
+}
+
+.vision_container_top .vision_inner .vision_card .txt ul {
+    color: white;
+    list-style: square !important;
+}
+
+/* SERVICE PAGE */
+
+.service_services, .franchise_franchises {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 3em;
+}
+
+.service_services  .service_services_container, .franchise_franchises .franchise_franchises_container {
+    display: flex;
+    /* text-align: center;
+    justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+
+.service_services .service_services_container h2, .franchise_franchises .franchise_franchises_container h2 {
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.service_services .service_services_container p, .franchise_franchises .franchise_franchises_container p {
+    color: gray;
+    width: 60%;
+    margin: 0.6em auto;
+}
+
+.service_services .service_services_container .service_services_inner, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card {
+    flex-basis: 32%;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card:hover > header h3, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card:hover > header h3 {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: .3s;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card header, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card header div, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card header div {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 78%;
+    /* display: none; */
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card header div.service_services_img, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card header div.franchise_franchises_img {
+    flex-basis: 20%;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card header img, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card header h3, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card header h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.service_services .service_services_container .service_services_inner .service_services_card .service_services_card_inner p, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner .franchise_franchises_card .franchise_franchises_card_inner p {
+    margin: 0;
+    width: 100%;
+} 
+
+.service_hero, .franchise_how_it_works {
+    margin: 3em 0;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.511), rgba(255, 255, 255, 0.511)),url('../assets/img/Topview_consulting_logo.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 3em 2em;
+}
+
+.service_hero .service_hero_container, .franchise_how_it_works .franchise_how_container {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+.service_hero .service_hero_container .service_hero_imgBox, .franchise_how_it_works .franchise_how_container .imgBox {
+    flex-basis: 30%;
+}
+
+.service_hero .service_hero_container .service_hero_imgBox img, .franchise_how_it_works .franchise_how_container .imgBox img {
+    width: 100%;
+}
+
+.service_hero .service_hero_container .service_hero_textBox, .franchise_how_it_works .franchise_how_container .txtBox {
+    flex-basis: 64%;
+    /* background-color: red; */
+}
+
+.service_hero .service_hero_container .service_hero_textBox h2, .franchise_how_it_works .franchise_how_container .txtBox h2 {
+    font-size: 3em;
+}
+
+.service_hero .service_hero_container .service_hero_textBox ul {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.service_hero .service_hero_container .service_hero_textBox ul li {
+    list-style-type: square;
+    color: black;
+}
+
+
+
+/* FRANCHISE PAGE */
+
+.franchise_how_it_works .franchise_how_container .txtBox p {
+    font-size: 1.005em;
+    margin: 1em 0;
+}
+
+.franchise_application {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 2em auto;
+}
+
+.franchise_application header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.franchise_application header h2 {
+    font-size: 3em;
+}
+
+.franchise_application form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding: 2em;
+    box-shadow: var(--box-shadow);
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+.franchise_application form .input {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 46%;
+}
+
+.franchise_application form .input.name {
+    flex-basis: 100%;
+}
+
+.franchise_application button {
+    width: 20%;
+    /* padding: 1em 2em; */
+    margin: 1em auto;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+}
+
+footer .footer_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .footer_container .footer_inner {
+    flex-basis: 31%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */ 
+}
+
+footer .footer_container .footer_inner .logo {
+    width: 100%;
+}
+
+footer .footer_container .footer_inner .logo img {
+    width: 100px;
+}
+
+footer .footer_container .footer_inner h2 {
+    font-size: 1.6em;
+}
+
+footer .footer_container .footer_inner h4 {
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+}
+
+footer .footer_container .footer_inner ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 0 auto;
+}
+
+footer .footer_container .footer_inner ul li a {
+    color: gray;
+}
+
+footer .footer_container .footer_inner form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer .footer_container .footer_inner form input {
+    padding: 1em 2em;
+}
+
+footer .footer_container .footer_inner form button {
+    padding: 1em;
+    background-color: var(--primary-color);
+    border: 0;
+    cursor: pointer;
+}
+
+footer .footer_container .footer_inner form button:hover {
+    background-color: rgb(154, 50, 10);
+    transition: .4s;
+}

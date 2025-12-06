@@ -1,0 +1,113 @@
+@media (max-width: 700px) {
+    .ourServices .service_container {
+        flex-direction: column;
+        margin: 1em auto;
+        align-items: center;
+    }
+
+    nav {
+        align-items: start;
+        height: 100px;
+        flex-direction: column;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    .bars {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+    nav .navbar ul li a::after {
+        left: 1000%;
+    }
+
+    nav .navbar ul {
+        flex-direction: column;
+        align-items: start;
+        display: none;
+        transition: .6s;
+    }
+
+    .ourServices .service_container .card {
+        width: 70%;
+    }
+
+    .ourFeatures {
+        display: block;
+        height: auto;
+    }
+    
+    .whyUs .whyUsInner {
+        display: block;
+    }
+
+    .newsletter {
+        width: 90%;
+    }
+
+    .newsletter h2 {
+        text-align: center;
+    }
+    
+        .service_hero .service_hero_container, .franchise_how_it_works .franchise_how_container {
+            flex-direction: column;
+        }
+    
+    .aboutUs .about_container, .franchise_container, .about_us .about_us_inner {
+        display: block;
+    }
+
+    .aboutUs .about_container .txtBox, .about_us .about_us_inner .txtBox, .flex .txt {
+        margin: 0;
+    }
+
+    .franchise_application form {
+        width: 90%;
+    }
+
+    .franchise_application button {
+        width: 50%;
+    }
+
+    footer .footer_container {
+        flex-direction: column;
+        gap: 3em;
+    }
+}
+
+@media (max-width: 600px) {
+    .home_container main h1 {
+        font-size: 2em;
+    }
+
+    .about_us header, .service_services header, .franchise_franchises header {
+        flex-direction: column;
+    }
+
+    .home_container main p {
+        width: 100%;
+    }
+
+    .whyUs header .icons {
+        flex-direction: column;
+    }
+
+    .testimonials {
+        width: 100% !important;
+    }
+
+    .vision_container_top {
+        width: 100%;
+    }
+
+    .vision_container_top .vision_inner .vision_card {
+        flex-direction: column;
+    }
+
+    .service_services .service_services_container .service_services_inner, .franchise_franchises .franchise_franchises_container .franchise_franchises_inner {
+        flex-direction: column;
+    }
+}
